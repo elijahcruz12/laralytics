@@ -1,0 +1,54 @@
+{
+    "name": "elijahcruz/laralytics",
+    "description": "Analytics, built right into Laravel",
+    "keywords": [
+        "elijahcruz",
+        "laralytics"
+    ],
+    "homepage": "https://github.com/elijahcruz/laralytics",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Elijah Cruz",
+            "email": "elijah@ecwebservices.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elijahcruz\\Laralytics\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Elijahcruz\\Laralytics\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elijahcruz\\Laralytics\\LaralyticsServiceProvider"
+            ],
+            "aliases": {
+                "Laralytics": "Elijahcruz\\Laralytics\\LaralyticsFacade"
+            }
+        }
+    }
+}
